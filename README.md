@@ -1,92 +1,69 @@
 📚 PageKeeper - Sistema de Gerenciamento de Biblioteca
-<div align="center">
-Laravel
-MySQL
-Docker
-SOLID
-PHP
+PageKeeper é um sistema completo para o gerenciamento de bibliotecas, permitindo o controle de livros, clientes e empréstimos com funcionalidades robustas de autenticação e organização.
 
-</div>
 ✨ Funcionalidades Principais
-🔐 Autenticação de usuários
+🔐 Autenticação de Usuários: Segurança com autenticação de usuários para garantir acesso controlado ao sistema.
 
-👥 Gerenciamento de Clientes (cadastro, edição, visualização)
+👥 Gerenciamento de Clientes: Cadastro, edição e visualização de informações dos clientes.
 
-📚 Controle de Livros (cadastro, categorização, status)
+📚 Controle de Livros: Cadastro de livros, categorização por gêneros e controle de status (disponível, emprestado, reservado).
 
-🏷️ Classificação por Gêneros para organização
+🏷️ Classificação por Gêneros: Organize os livros por gênero para facilitar a busca e a organização.
 
-🔄 Sistema de Empréstimos com controle de datas
+🔄 Sistema de Empréstimos: Controle completo de empréstimos com datas de empréstimo e devolução.
 
 🛠 Stack Tecnológica
-Backend
-PHP 8.2+
+Backend: PHP 8.2+, Laravel 12, MySQL 8 (Docker), Princípios SOLID
 
-Laravel 12
-
-MySQL 8 (Docker)
-
-Princípios SOLID
-
-Frontend
-Inertia.js
-
-Vite
-
-Tailwind CSS 3
-
-ShadCN (opcional)
+Frontend: Inertia.js, Vite, Tailwind CSS 3, ShadCN (opcional)
 
 🚀 Instalação
-Pré-requisitos
+Pré-requisitos:
+
+PHP 8.2+
+
 Docker
 
 Node.js 16+
 
 Composer
 
-bash
-# Clone o repositório
+Passos para Instalação:
+
+Clone o repositório:
+
 git clone https://github.com/VictorRochaSilva/pagekeeper.git
 cd pagekeeper
 
-# Inicie os containers
+Inicie o contêiner MySQL:
+
 docker-compose up -d
 
-# Configure o ambiente
+Configure o ambiente:
+
 cp .env.example .env
-docker exec -it pagekeeper_app bash -c "composer install && php artisan key:generate && php artisan migrate --seed && npm install && npm run dev"
-🔍 Acesso
-Serviço	URL	Credenciais
-Aplicação	http://localhost:8000	admin@admin.com / admin
-phpMyAdmin	http://localhost:8080	root / password
-🏗 Arquitetura SOLID
-Repositórios para acesso a dados
+Instale as dependências:
 
-Services para lógica de negócio
+Backend:
 
-DTOs para transferência de dados
+composer install
 
-Interfaces para injeção de dependência
+Frontend:
 
-Requests validadas
+npm install
 
-🛠 Comandos Úteis
-bash
-# Recriar banco de dados
-docker exec -it pagekeeper_app php artisan migrate:fresh --seed
+Execute o ambiente de desenvolvimento:
 
-# Build para produção
-npm run build
+Para rodar o Laravel (backend) e o Vite (frontend) separadamente, use:
 
-# Listar rotas
-php artisan route:list
+php artisan serve
+npm run dev
 
-# Executar testes
-php artisan test
-<div align="center">
-Licença MIT
+Ou, para rodar ambos com um único comando:
 
-Desenvolvido com ❤️ por Victor
+composer run dev
 
-</div>
+📝 Licença
+Este projeto está sob a Licença MIT.
+
+Desenvolvido com ❤️ por Victor Rocha
