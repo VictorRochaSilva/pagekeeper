@@ -1,69 +1,100 @@
-📚 PageKeeper - Sistema de Gerenciamento de Biblioteca
-PageKeeper é um sistema completo para o gerenciamento de bibliotecas, permitindo o controle de livros, clientes e empréstimos com funcionalidades robustas de autenticação e organização.
+# 📚 PageKeeper – Sistema de Gerenciamento de Bibliotecas
 
-✨ Funcionalidades Principais
-🔐 Autenticação de Usuários: Segurança com autenticação de usuários para garantir acesso controlado ao sistema.
+**PageKeeper** é uma aplicação robusta para gerenciamento de bibliotecas, oferecendo funcionalidades completas para controle de livros, clientes e empréstimos, com foco em organização, segurança e boas práticas de desenvolvimento.
 
-👥 Gerenciamento de Clientes: Cadastro, edição e visualização de informações dos clientes.
+---
 
-📚 Controle de Livros: Cadastro de livros, categorização por gêneros e controle de status (disponível, emprestado, reservado).
+## ✨ Principais Funcionalidades
 
-🏷️ Classificação por Gêneros: Organize os livros por gênero para facilitar a busca e a organização.
+- 🔐 **Autenticação Segura**  
+  Sistema de autenticação para garantir acesso controlado ao ambiente administrativo.
 
-🔄 Sistema de Empréstimos: Controle completo de empréstimos com datas de empréstimo e devolução.
+- 👥 **Gestão de Clientes**  
+  Cadastro, edição e visualização de clientes com dados detalhados.
 
-🛠 Stack Tecnológica
-Backend: PHP 8.2+, Laravel 12, MySQL 8 (Docker), Princípios SOLID
+- 📚 **Gerenciamento de Livros**  
+  Registro completo de livros, incluindo classificação por gêneros e controle de status (disponível, emprestado, reservado).
 
-Frontend: Inertia.js, Vite, Tailwind CSS 3, ShadCN (opcional)
+- 🏷️ **Categorização por Gêneros**  
+  Organização inteligente por gêneros literários para facilitar a navegação e busca.
 
-🚀 Instalação
-Pré-requisitos:
+- 🔄 **Sistema de Empréstimos**  
+  Controle eficiente de empréstimos, com registro de datas de retirada e devolução.
 
-PHP 8.2+
+---
 
-Docker
+## 🛠️ Stack Tecnológica
 
-Node.js 16+
+**Backend**  
+- PHP 8.2+  
+- Laravel 12  
+- MySQL 8 (via Docker)  
+- Princípios SOLID aplicados  
 
-Composer
+**Frontend**  
+- Inertia.js  
+- Vite  
+- Tailwind CSS 3  
+- ShadCN (opcional)
 
-Passos para Instalação:
+---
 
-Clone o repositório:
+## 🚀 Instalação e Execução
 
+### Pré-requisitos
+
+- PHP 8.2+  
+- Docker  
+- Node.js 16+  
+- Composer
+
+### Passo a passo
+
+1. Clone o repositório:
+
+```bash
 git clone https://github.com/VictorRochaSilva/pagekeeper.git
 cd pagekeeper
+```
 
-Inicie o contêiner MySQL:
+2. Suba o container do MySQL:
 
+```bash
 docker-compose up -d
+```
 
-Configure o ambiente:
+3. Copie o arquivo de ambiente:
 
+```bash
 cp .env.example .env
-Instale as dependências:
+```
 
-Backend:
+4. Instale as dependências do backend:
 
+```bash
 composer install
+```
 
-Frontend:
+5. Instale as dependências do frontend:
 
+```bash
 npm install
+```
 
-Execute o ambiente de desenvolvimento:
+6. Execute os servidores:
 
-Para rodar o Laravel (backend) e o Vite (frontend) separadamente, use:
-
+```bash
 php artisan serve
 npm run dev
+```
 
-Ou, para rodar ambos com um único comando:
+ou:
 
+```bash
 composer run dev
+```
 
 📝 Licença
-Este projeto está sob a Licença MIT.
+Este projeto está licenciado sob a Licença MIT.
 
-Desenvolvido com ❤️ por Victor Rocha
+Desenvolvido por Victor Rocha.
